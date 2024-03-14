@@ -7,6 +7,8 @@ import (
 	"fmt"
 	"io/ioutil"
 	"net/http"
+
+	"github.com/fatih/color"
 )
 
 type TopHolder struct {
@@ -112,11 +114,11 @@ func main() {
 
 	switch {
 	case data.Risks[0].Score < 1000:
-		ScoreAnalysis = "Good"
+		ScoreAnalysis = color.GreenString("Good")
 	case data.Risks[0].Score < 5000:
-		ScoreAnalysis = "Warning"
+		ScoreAnalysis = color.YellowString("Warning")
 	default:
-		ScoreAnalysis = "Danger"
+		ScoreAnalysis = color.RedString("Danger")
 	}
 
 	fmt.Println("Rug Risk Score:", ScoreAnalysis)
