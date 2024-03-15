@@ -5,7 +5,7 @@ A rug pull is a scam where a developer promotes a project to attract investors, 
 ### Install
 
 ```console
-go install github.com/rudSarkar/rugchecker
+go install github.com/rudSarkar/rugchecker@latest
 ```
 
 ### Run
